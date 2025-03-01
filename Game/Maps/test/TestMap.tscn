@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkyjyldvnu6vt"]
+
+[ext_resource type="PackedScene" uid="uid://bsg0351mx3b4u" path="res://addons/MetroidvaniaSystem/Nodes/RoomInstance.tscn" id="1_wmtqc"]
+[ext_resource type="TileSet" uid="uid://bt8yx6en1ee4g" path="res://Game/Resources/tileset/style A.tres" id="1_xrvbq"]
+[ext_resource type="PackedScene" uid="uid://h47llpgqidv" path="res://Game/Scenes/player/Player.tscn" id="3_7t2o3"]
+
+[node name="Map" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-30, -8)
+tile_set = ExtResource("1_xrvbq")
+format = 2
+layer_0/tile_data = PackedInt32Array(720898, 39, 0, 720899, 39, 0, 720900, 39, 0, 720901, 39, 0, 720902, 39, 0, 720903, 39, 0, 720904, 39, 0, 720905, 39, 0, 720906, 39, 0, 720907, 39, 0, 720908, 39, 0, 720909, 39, 0, 720910, 39, 0, 720911, 39, 0, 720912, 39, 0, 720913, 39, 0, 720914, 39, 0, 720915, 39, 0, 720916, 39, 0, 720917, 39, 0, 720918, 39, 0, 720919, 39, 0, 720920, 39, 0, 720921, 39, 0, 720922, 39, 0, 720923, 39, 0, 720924, 39, 0, 720925, 39, 0, 720926, 39, 0, 720927, 39, 0, 720928, 39, 0, 720929, 39, 0)
+
+[node name="RoomInstance" parent="." instance=ExtResource("1_wmtqc")]
+
+[node name="Player" parent="." instance=ExtResource("3_7t2o3")]
