@@ -17,6 +17,10 @@ var hurtbox = $Area2D
 #export variables
 #----------------
 @export
+var CutsceneState: State
+@export
+var Idle: State
+@export
 var JUMP_VELOCITY: int
 @export
 var SHORT_HOP_MODIFIER: float
@@ -27,10 +31,9 @@ var SHORT_HOP_TIME: int #I want frame based, but I can settle for milisecond bas
 @export
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity") 
 
-
 var reset_position: Vector2
 # Indicates that the player has an event happening and can't be controlled.
-var event: bool
+var event: bool = false
 
 var abilities: Array[StringName]
 var prev_on_floor: bool
@@ -49,12 +52,24 @@ var state_machine_disabled = false
 func _ready() -> void:
 	#set up state machine
 	state_machine.init(self, animations, move_component)
+	SignalBus.connect("cutscene", func f(): 
+		event = true
+		state_machine.change_state(CutsceneState)
+	)
+	SignalBus.connect("cutscene_over", func f():
+		event = false
+		state_machine.change_state(Idle) 
+	)
 	
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(in_event: InputEvent) -> void:
+	if event:
+		return
 	if !state_machine_disabled:
-		state_machine.process_input(event)	
+		state_machine.process_input(in_event)	
 
 func _physics_process(delta: float) -> void:
+	if event:
+		return
 	if !state_machine_disabled:
 		state_machine.process_physics(delta)
 

@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://7cx66plvbafk"]
+[gd_scene load_steps=12 format=3 uid="uid://7cx66plvbafk"]
 
-[ext_resource type="Script" path="res://SampleProject/Scripts/Game.gd" id="1_u50yb"]
+[ext_resource type="Script" uid="uid://btgvo27tngq4o" path="res://SampleProject/Scripts/Game.gd" id="1_u50yb"]
 [ext_resource type="PackedScene" uid="uid://dch8dyylb7526" path="res://addons/MetroidvaniaSystem/Template/Nodes/Minimap.tscn" id="2_qge56"]
 [ext_resource type="PackedScene" uid="uid://h47llpgqidv" path="res://Game/Scenes/player/Player.tscn" id="2_whn1y"]
 [ext_resource type="Texture2D" uid="uid://wiq0mic5m6is" path="res://SampleProject/Sprites/Collectible.png" id="3_f5qpe"]
+[ext_resource type="PackedScene" uid="uid://ep5d4571o0nr" path="res://Game/Scenes/Main Scenes/dialog_box.tscn" id="5_nhr5j"]
+[ext_resource type="Script" uid="uid://yfeoioyoykb6" path="res://Game/Scripts/main scripts/dialog_manager.gd" id="6_r80vp"]
+[ext_resource type="AudioStream" uid="uid://b7ns7o4apobgb" path="res://glitchy ambient loop.wav" id="7_5nq7d"]
+[ext_resource type="Script" uid="uid://dn2gtw6m6oi8x" path="res://Game/Scripts/delete later/dialog_test.gd" id="7_jgyqq"]
 
 [sub_resource type="GDScript" id="GDScript_n5n0d"]
 resource_name = "MapWindow"
@@ -148,6 +152,14 @@ zoom = Vector2(1.2, 1.2)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="DialogBox" parent="UI" instance=ExtResource("5_nhr5j")]
+visible = false
+z_index = 4
+offset_left = 83.0
+offset_top = 343.0
+offset_right = 764.0
+offset_bottom = 462.0
+
 [node name="Minimap" parent="UI" instance=ExtResource("2_qge56")]
 unique_name_in_owner = true
 anchors_preset = 1
@@ -227,5 +239,18 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 vertical_alignment = 1
+
+[node name="DialogManager" type="Node" parent="." node_paths=PackedStringArray("SFX")]
+script = ExtResource("6_r80vp")
+dialogLines = Array[String](["Roberto: I am Roberto", "Roberto: I am a worship pastor", "Roberto: I love to play guitar"])
+SFX = NodePath("GlitchyAmbientLoop")
+selfdestruct = true
+metadata/_custom_type_script = "uid://yfeoioyoykb6"
+
+[node name="GlitchyAmbientLoop" type="AudioStreamPlayer" parent="DialogManager"]
+stream = ExtResource("7_5nq7d")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("7_jgyqq")
 
 [connection signal="draw" from="UI/MapWindow/TopDraw" to="UI/MapWindow" method="_on_top_draw"]

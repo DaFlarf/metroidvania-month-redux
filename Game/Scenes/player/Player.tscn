@@ -12,11 +12,13 @@
 [ext_resource type="Script" uid="uid://c065ce7bloqy0" path="res://Game/Scripts/Player/states/movement/fall.gd" id="9_aemqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1swjn"]
-size = Vector2(20, 84.6848)
+size = Vector2(20, 88.7174)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("CutsceneState", "Idle")]
 z_index = 1
 script = ExtResource("1_lwyg6")
+CutsceneState = NodePath("state_machine/idle")
+Idle = NodePath("state_machine/idle")
 JUMP_VELOCITY = -500
 SHORT_HOP_MODIFIER = 0.7
 MAX_FALL_SPEED = 900
@@ -24,10 +26,10 @@ gravity = 980
 
 [node name="animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_m3ymj")
-animation = &"fall"
+animation = &"idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0, -4.70877e-06)
 scale = Vector2(1.0685, 0.495957)
 shape = SubResource("RectangleShape2D_1swjn")
 
