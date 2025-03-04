@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://h47llpgqidv"]
+
+[ext_resource type="Script" uid="uid://dt1p2fm3mblgd" path="res://Game/Scripts/Player/Player.gd" id="1_lwyg6"]
+[ext_resource type="PackedScene" uid="uid://btpmifmo6yjro" path="res://Game/Scenes/state machine/state_machine.tscn" id="1_ui3lv"]
+[ext_resource type="SpriteFrames" uid="uid://cac10hbewvi7h" path="res://Game/Resources/player/player_animations.tres" id="2_m3ymj"]
+[ext_resource type="Script" uid="uid://c4xu6hbm78txm" path="res://Game/Scripts/Player/states/movement/idle.gd" id="3_ie2ni"]
+[ext_resource type="Script" uid="uid://d0ujy8jumeaq0" path="res://Game/Scripts/Player/Input/move_component.gd" id="4_6jj04"]
+[ext_resource type="Script" uid="uid://bpda4bsb0j805" path="res://Game/Scripts/Player/states/movement/walk.gd" id="4_dcrj0"]
+[ext_resource type="Script" uid="uid://dwly7mikvl1wq" path="res://Game/Scripts/Player/states/movement/jumpsquat.gd" id="6_ayigr"]
+[ext_resource type="Script" uid="uid://cn7h4voevc3ii" path="res://Game/Scripts/Player/states/movement/shorthop.gd" id="7_lnmwe"]
+[ext_resource type="Script" uid="uid://ulmh47d5mxmg" path="res://Game/Scripts/Player/states/movement/jump.gd" id="8_3myn3"]
+[ext_resource type="Script" uid="uid://c065ce7bloqy0" path="res://Game/Scripts/Player/states/movement/fall.gd" id="9_aemqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1swjn"]
+size = Vector2(20, 84.6848)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_lwyg6")
+JUMP_VELOCITY = -500
+SHORT_HOP_MODIFIER = 0.7
+MAX_FALL_SPEED = 900
+gravity = 980
+
+[node name="animations" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_m3ymj")
+animation = &"fall"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(1.0685, 0.495957)
+shape = SubResource("RectangleShape2D_1swjn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="hurtbox" type="CollisionShape2D" parent="Area2D"]
+
+[node name="state_machine" parent="." node_paths=PackedStringArray("starting_state") instance=ExtResource("1_ui3lv")]
+starting_state = NodePath("idle")
+
+[node name="idle" type="Node" parent="state_machine" node_paths=PackedStringArray("walk_state", "jumpsquat_state", "fall_state")]
+script = ExtResource("3_ie2ni")
+walk_state = NodePath("../walk")
+jumpsquat_state = NodePath("../jumpsquat")
+fall_state = NodePath("../fall")
+animation_name = "idle"
+
+[node name="walk" type="Node" parent="state_machine" node_paths=PackedStringArray("idle_state", "jumpsquat_state", "fall_state")]
+script = ExtResource("4_dcrj0")
+idle_state = NodePath("../idle")
+jumpsquat_state = NodePath("../jumpsquat")
+fall_state = NodePath("../fall")
+animation_name = "run"
+
+[node name="jumpsquat" type="Node" parent="state_machine" node_paths=PackedStringArray("shorthop_state", "fullhop_state", "fall_state")]
+script = ExtResource("6_ayigr")
+shorthop_state = NodePath("../shorthop")
+fullhop_state = NodePath("../jump")
+fall_state = NodePath("../fall")
+shorthop_time = 5
+fullhop_time = 6
+animation_name = "jumpsquat"
+
+[node name="shorthop" type="Node" parent="state_machine" node_paths=PackedStringArray("fall_state", "landing_state")]
+script = ExtResource("7_lnmwe")
+time = 45
+fall_state = NodePath("../fall")
+landing_state = NodePath("../idle")
+animation_name = "jump"
+
+[node name="jump" type="Node" parent="state_machine" node_paths=PackedStringArray("fall_state", "landing_state")]
+script = ExtResource("8_3myn3")
+time = 60
+fall_state = NodePath("../fall")
+landing_state = NodePath("../idle")
+not_so_full_hop_time = 45
+animation_name = "jump"
+
+[node name="fall" type="Node" parent="state_machine" node_paths=PackedStringArray("land_state")]
+script = ExtResource("9_aemqs")
+land_state = NodePath("../idle")
+animation_name = "default"
+
+[node name="move_component" type="Node" parent="."]
+script = ExtResource("4_6jj04")

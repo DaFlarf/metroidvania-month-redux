@@ -1,0 +1,230 @@
+[gd_resource type="SpriteFrames" load_steps=36 format=3 uid="uid://cac10hbewvi7h"]
+
+[ext_resource type="Texture2D" uid="uid://cj2gni5dkm5fl" path="res://Game/Sprites/Player/Helmet/player idle forward.png" id="1_i0wim"]
+[ext_resource type="Texture2D" uid="uid://coqseghnjtkfl" path="res://Game/Sprites/Player/Helmet/movement/Character 01 - Idle R-export1.png" id="2_tedm2"]
+[ext_resource type="Texture2D" uid="uid://bb7uels7mfl4p" path="res://Game/Sprites/Player/Helmet/movement/Character 01 - Idle R-export2.png" id="3_dfg46"]
+[ext_resource type="Texture2D" uid="uid://cskedv83ev1it" path="res://Game/Sprites/Player/Helmet/movement/Character 01 - Idle R-export3.png" id="4_pfuh3"]
+[ext_resource type="Texture2D" uid="uid://dll45bt3v6s55" path="res://Game/Sprites/Player/Helmet/movement/Character 01 - Idle R-export4.png" id="5_uc7wx"]
+[ext_resource type="Texture2D" uid="uid://d256krjvx7ejo" path="res://Game/Sprites/Player/Helmet/movement/Jump R (1)-export2.png" id="6_bvhr5"]
+[ext_resource type="Texture2D" uid="uid://b3duftp6w628l" path="res://Game/Sprites/Player/Helmet/movement/Jump R (1)-export3.png" id="7_8bvg2"]
+[ext_resource type="Texture2D" uid="uid://bom86nt746o2" path="res://Game/Sprites/Player/No Helmet/movement/Idle [no helm]-export1.png" id="7_w02we"]
+[ext_resource type="Texture2D" uid="uid://dlr67vomf8qd6" path="res://Game/Sprites/Player/Helmet/movement/Jump R (1)-export1.png" id="8_b1alb"]
+[ext_resource type="Texture2D" uid="uid://cl87febnsspp" path="res://Game/Sprites/Player/No Helmet/movement/Idle [no helm]-export2.png" id="8_jhnu5"]
+[ext_resource type="Texture2D" uid="uid://d4im38ljcdwr6" path="res://Game/Sprites/Player/No Helmet/movement/Idle [no helm]-export3.png" id="9_42hng"]
+[ext_resource type="Texture2D" uid="uid://o5fsnw6ejbj0" path="res://Game/Sprites/Player/Helmet/movement/Run R-export1.png" id="9_vj2vx"]
+[ext_resource type="Texture2D" uid="uid://bu54s5wcvx73f" path="res://Game/Sprites/Player/Helmet/movement/Run R-export2.png" id="10_hdrxu"]
+[ext_resource type="Texture2D" uid="uid://bckff7ngn5emx" path="res://Game/Sprites/Player/No Helmet/movement/Idle [no helm]-export4.png" id="10_qpko6"]
+[ext_resource type="Texture2D" uid="uid://bchjylji8f5cd" path="res://Game/Sprites/Player/Helmet/movement/Run R-export3.png" id="11_7lsup"]
+[ext_resource type="Texture2D" uid="uid://cuwq4p1cje8nr" path="res://Game/Sprites/Player/No Helmet/movement/Jump [no helm]-export1.png" id="12_7wdfo"]
+[ext_resource type="Texture2D" uid="uid://72uup06xbhkk" path="res://Game/Sprites/Player/Helmet/movement/Run R-export4.png" id="12_gbp0n"]
+[ext_resource type="Texture2D" uid="uid://cjfj72rrl8wx2" path="res://Game/Sprites/Player/No Helmet/movement/Jump [no helm]-export2.png" id="13_4d1qo"]
+[ext_resource type="Texture2D" uid="uid://tcifvg3g8taw" path="res://Game/Sprites/Player/Helmet/movement/Run R-export5.png" id="13_tc4t0"]
+[ext_resource type="Texture2D" uid="uid://djrwkqajic66u" path="res://Game/Sprites/Player/Helmet/movement/Run R-export6.png" id="14_k6vek"]
+[ext_resource type="Texture2D" uid="uid://gqp0tblyudxe" path="res://Game/Sprites/Player/No Helmet/movement/Jump [no helm]-export3.png" id="14_yga8q"]
+[ext_resource type="Texture2D" uid="uid://g203map2o2lf" path="res://Game/Sprites/Player/Helmet/movement/Run R-export7.png" id="15_55xdp"]
+[ext_resource type="Texture2D" uid="uid://dhe8la7xqdgsl" path="res://Game/Sprites/Player/Helmet/movement/Run R-export8.png" id="16_0bcv4"]
+[ext_resource type="Texture2D" uid="uid://bq8q5f4vvljlw" path="res://Game/Sprites/Player/Helmet/movement/Run R-export9.png" id="17_6w0vo"]
+[ext_resource type="Texture2D" uid="uid://ci22e126gu87d" path="res://Game/Sprites/Player/Helmet/movement/Run R-export10.png" id="18_h7k6o"]
+[ext_resource type="Texture2D" uid="uid://b3358c6ulfe6f" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export1.png" id="26_6figs"]
+[ext_resource type="Texture2D" uid="uid://dkdnw5445tvgg" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export2.png" id="27_jagwk"]
+[ext_resource type="Texture2D" uid="uid://dm452yp577g1p" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export3.png" id="28_4ou4s"]
+[ext_resource type="Texture2D" uid="uid://c5j7lhwe1xylh" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export4.png" id="29_ie1ii"]
+[ext_resource type="Texture2D" uid="uid://bd8ywta1b7yku" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export5.png" id="30_2lmr0"]
+[ext_resource type="Texture2D" uid="uid://ckiukru2huiif" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export6.png" id="31_srl56"]
+[ext_resource type="Texture2D" uid="uid://dim7p4n6tn674" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export7.png" id="32_74hy5"]
+[ext_resource type="Texture2D" uid="uid://2mgk7ec4eqbc" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export8.png" id="33_ci28b"]
+[ext_resource type="Texture2D" uid="uid://c8qnxbbj3phxo" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export9.png" id="34_ygwx2"]
+[ext_resource type="Texture2D" uid="uid://b4psf2kevr0wo" path="res://Game/Sprites/Player/No Helmet/movement/Run [no helm]-export10.png" id="35_tv6ra"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i0wim")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8bvg2")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_yga8q")
+}],
+"loop": false,
+"name": &"fall(helmetless)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tedm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tedm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dfg46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dfg46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pfuh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pfuh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uc7wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uc7wx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w02we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w02we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jhnu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jhnu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_42hng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_42hng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qpko6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qpko6")
+}],
+"loop": true,
+"name": &"idle(helmetless)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bvhr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8bvg2")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_7wdfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4d1qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yga8q")
+}],
+"loop": false,
+"name": &"jump(helmetless)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_b1alb")
+}],
+"loop": true,
+"name": &"jumpsquat",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"jumpsquat(helmetless)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_vj2vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hdrxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7lsup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gbp0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tc4t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_k6vek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_55xdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0bcv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6w0vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_h7k6o")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_6figs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jagwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_4ou4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ie1ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_2lmr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_srl56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_74hy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ci28b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ygwx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tv6ra")
+}],
+"loop": true,
+"name": &"run(helmetless)",
+"speed": 10.0
+}]
